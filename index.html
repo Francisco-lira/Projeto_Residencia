@@ -3,32 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Clientes</title>
+    <title>Cadastro de Clientes - Barbearia</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Cadastro de Clientes</h1>
+    <h1>Cadastro de Clientes - Barbearia</h1>
 
     <form id="clientForm">
-        <label for="name">Nome:</label>
+        <label for="name">Nome do Cliente:</label>
         <input type="text" id="name" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" required>
 
         <label for="phone">Telefone:</label>
         <input type="text" id="phone" required>
 
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="service">Serviço:</label>
+        <select id="service" required>
+            <option value="Corte de Cabelo">Corte de Cabelo</option>
+            <option value="Barba">Barba</option>
+            <option value="Corte + Barba">Corte + Barba</option>
+            <option value="Sobrancelha">Sobrancelha</option>
+        </select>
+
+        <label for="barber">Barbeiro:</label>
+        <select id="barber" required>
+            <option value="João">João</option>
+            <option value="Carlos">Carlos</option>
+            <option value="Pedro">Pedro</option>
+            <option value="André">André</option>
+        </select>
+
         <button type="submit">Cadastrar Cliente</button>
     </form>
 
-    <h2>Lista de Clientes</h2>
+    <h2>Buscar Cliente</h2>
+    <input type="text" id="searchQuery" placeholder="Buscar por nome, telefone ou email">
+    <button id="searchBtn">Buscar</button>
+
+    <h2>Clientes Cadastrados</h2>
     <table>
         <thead>
             <tr>
                 <th>Nome</th>
-                <th>Email</th>
                 <th>Telefone</th>
+                <th>Email</th>
+                <th>Serviço</th>
+                <th>Barbeiro</th>
                 <th>Ações</th>
             </tr>
         </thead>
